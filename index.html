@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodeguero</title>
+    <link rel="stylesheet" href="styles.css" />
+    
+</head>
+<body>
+    <h1>Bodeguero</h1>
+    
+    <section id="inicializacion">
+        <h3>Inicializar Bodega</h3>
+        <input type="number" id="inicial10" placeholder="Cantidad de billetes de $10" />
+        <input type="number" id="inicial20" placeholder="Cantidad de billetes de $20" />
+        <input type="number" id="inicial50" placeholder="Cantidad de billetes de $50" />
+        <button id="inicializarBodega">Inicializar Bodega</button>
+    </section>
+
+
+   
+
+    <div id="salida"></div>
+
+    <section id="mainFrom">
+        <h3>Bodega</h3>
+        <table id="main_Tabla">
+            <tr>
+                <th>Cédula</th>
+                <th>Denominación</th>
+                <th>Cantidad</th>
+                <th>Edad</th>
+                <th>Monto Total</th>
+            </tr>
+        </table>
+
+        <h5>Monto final de billetes de 10$ es: <span id="billete10"></span>$</h5>
+        <h5>Monto final de billetes de 20$ es: <span id="billete20"></span>$</h5>
+        <h5>Monto final de billetes de 50$ es: <span id="billete50"></span>$</h5>
+        <h5>El monto final del bodeguero es: <span id="montoFinal"></span>$</h5>
+        <h5>El porcentaje de incremento de la cantidad de billetes de 50$ son: <span id="porcentaje50"></span>%</h5>
+        <h5>El porcentaje de clientes mayores de edad son: <span id="porcentajeclimayores"></span>%</h5>
+
+        
+
+        <button id="main_Agregarcliente">Agregar Cliente</button>
+    </section>
+
+    <section id="cliente">
+        <input type="text" id="cliente_Cedula" placeholder="Cédula" />
+        <input type="text" id="cliente_Denominacion" placeholder="Denominación" />
+        <input type="number" id="cliente_Cantidad" placeholder="Cantidad" />
+        <input type="number" id="cliente_Edad" placeholder="Edad" />
+        <button id="cliente_Aceptar">Aceptar</button>
+    </section>
+
+    <script type="module">
+        import Cl_controlador from "./js/Cl_controlador.js";
+        new Cl_controlador();
+    </script>
+</body>
+</html>
